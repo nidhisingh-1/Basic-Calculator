@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         buttonC = (Button) findViewById(R.id.btnclear);
         buttonEqual = (Button) findViewById(R.id.btnequals);
         text = (TextView) findViewById(R.id.text);
+        btn =  findViewById(R.id.btn);
         btn.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
