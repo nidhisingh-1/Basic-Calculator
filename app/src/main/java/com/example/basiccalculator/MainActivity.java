@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonAdd, buttonSub, buttonDivision, buttonMul, buttonC, buttonEqual;
+    Button btn button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonAdd, buttonSub, buttonDivision, buttonMul, buttonC, buttonEqual;
     TextView text;
     float value1, value2;
     boolean add, multiply, subtract, divide;
@@ -37,6 +37,17 @@ public class MainActivity extends AppCompatActivity {
         buttonC = (Button) findViewById(R.id.btnclear);
         buttonEqual = (Button) findViewById(R.id.btnequals);
         text = (TextView) findViewById(R.id.text);
+        btn.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+
+        String url = "tel:9654585891";
+        Uri uri = Uri.parse(url);
+
+        Intent i = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(i);
+    }
+});
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
